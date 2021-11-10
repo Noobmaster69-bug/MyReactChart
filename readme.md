@@ -1,6 +1,7 @@
 Example: nằm trong App.js
 
 CustomChart props:
+
 data: Một array mà các phần tử có định dạng sau:
 
     {
