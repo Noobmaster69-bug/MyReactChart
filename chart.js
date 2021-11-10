@@ -34,8 +34,8 @@ class dataset {
       this.data.forEach((d, i) => (d.y = this.Y[i]));
     }
   }
-  static parseDate (date, format = "%m/%d/%Y"){
-    const temp = d3.timeParse(format)
+  static parseDate (date){
+    const temp = d3.utcParse("%Y-%m-%dT%H:%M:%S.%LZ");
     return temp(date)
   }
 }
@@ -130,7 +130,7 @@ function Chart({ padding, data, option = {axis: true} }) {
       >
         {data?.map((dataset) => {
           if (dataset.type === "line") {
-            return <Line dataset={dataset} />;
+            return <Line dataset={dataset} key = {Math.random()}/>;
           }
         })}
       </g>

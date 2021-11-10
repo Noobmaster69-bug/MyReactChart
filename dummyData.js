@@ -7,7 +7,7 @@ const boxMullerRandom = () => (
 )
 
 const today = new Date()
-const formatDate = d3.timeFormat("%m/%d/%Y")
+const formatDate = d3.isoFormat
 export const getTimelineData = (length = 100) => {
   let lastTemperature = randomAroundMean(70, 20)
   const firstTemperature = d3.timeDay.offset(today, -length)
