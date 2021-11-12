@@ -1,6 +1,10 @@
-Example: nằm trong App.js
+*Thư viện cần thiết: 
 
-CustomChart props:
+        npm install d3
+
+*Example: nằm trong App.js
+
+*CustomChart props:
 
 data: Một array mà các phần tử có định dạng sau:
 
